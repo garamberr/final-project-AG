@@ -38,7 +38,6 @@ covid_dataset <- covid_dataset %>%
 covid_dataset$result <- as.numeric(covid_dataset$result)
 
 # FIT A UNIVARIATE REGRESSON
-
 Univariate_Analysis <- tbl_uvregression(
 	covid_dataset,
 	y = result,
@@ -61,9 +60,13 @@ mean_val <- sum(x) / n
 
 return(mean_val)
 }
-covid_mean <- covid_dataset2$age
+covid_mean(covid_dataset2$pan_day)
+
 
 # DOWNLOAD AND RENDER QUARTO DOCUMENT
 
-# HERE
-# download, use load
+# {HERE} PACKAGE
+install.packages("here")
+here::here("data", "raw", "data.csv")
+
+
