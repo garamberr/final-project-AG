@@ -54,3 +54,16 @@ covid_dataset2 <- covid_dataset %>%
 hist(covid_dataset$result)
 
 # WRITE AND USE A FUNCTION THAT DOES SOMETHING WTH THE DATA
+covid_mean <- function() {
+
+n <- length(x)
+mean_val <- sum(x) / n
+
+return(mean_val)
+}
+covid_mean <- covid_dataset2$age
+
+# DOWNLOAD AND RENDER QUARTO DOCUMENT
+
+# HERE
+# download, use load
