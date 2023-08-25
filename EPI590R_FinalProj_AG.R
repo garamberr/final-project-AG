@@ -53,15 +53,14 @@ covid_dataset2 <- covid_dataset %>%
 hist(covid_dataset$result)
 
 # WRITE AND USE A FUNCTION THAT DOES SOMETHING WTH THE DATA
-covid_mean <- function() {
+covid_mean <- function(x) {
 
 n <- length(x)
 mean_val <- sum(x) / n
 
 return(mean_val)
 }
-covid_mean(covid_dataset2$pan_day)
-
+covid_mean(covid_dataset2$orderset)
 
 # DOWNLOAD AND RENDER QUARTO DOCUMENT
 
@@ -69,4 +68,6 @@ covid_mean(covid_dataset2$pan_day)
 install.packages("here")
 here::here("data", "raw", "data.csv")
 
-
+# {RENV} PACKAGE
+install.packages("renv")
+renv::init()
